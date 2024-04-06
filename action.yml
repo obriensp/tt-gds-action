@@ -11,6 +11,9 @@ inputs:
   skip-reports:
     description: 'Skip generating reports (yosys warnings, routing, cell usage)'
     default: false
+  cachix-auth-token:
+    description: 'Auth token for pushing to cachix'
+    default: ''
 
 runs:
   using: 'composite'
@@ -64,7 +67,7 @@ runs:
     - uses: cachix/cachix-action@v14
       with:
         name: obriensp
-        authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
+        authToken: ${{ inputs.cachix-auth-token }}
 
     - name: Make GDS with OpenLane 2
       shell: bash
