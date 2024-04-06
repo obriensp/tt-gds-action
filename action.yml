@@ -55,7 +55,7 @@ runs:
     - name: Checkout OpenLane 2 repo
       uses: actions/checkout@v4
       with:
-        repository: efabless/openlane2
+        repository: obriensp/openlane2
         path: ${{ env.OPENLANE_ROOT }}
         ref: ${{ env.OPENLANE_TAG }}
 
