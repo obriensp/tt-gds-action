@@ -63,8 +63,8 @@ runs:
 
     - uses: cachix/cachix-action@v14
       with:
-        name: openlane
-        extraPullNames: openlane
+        name: obriensp
+        authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
 
     - name: Make GDS with OpenLane 2
       shell: bash
